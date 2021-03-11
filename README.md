@@ -1,6 +1,6 @@
 # Browser Technologies @cmda-minor-web 20-21
 
-//Robuuste, toegankelijke websites ontwerpen en maken …
+// Robuuste, toegankelijke websites ontwerpen en maken … //
 
 Één van de mooiste [principes](https://www.w3.org/DesignIssues/Principles.html) van het web is dat iedereen met een computer en een browser het web kan gebruik. [Het web is voor iedereen](https://www.youtube.com/watch?v=UMNFehJIi0E). Het is geen gecontroleerde (programmeer) omgeving, je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij in je browser ziet. Er zijn technische beperkingen, zoals afmetingen van de browser, grootte van het apparaat, manier van interactie, kwaliteit van de hardware, kwaliteit van het netwerk en er zijn mensen, allemaal verschillende mensen ...
 
@@ -16,7 +16,7 @@ Voor de eerste opdracht gaan we onderzoeken wat Progressive Enhancement is.
 
 - [Opdracht 1 Uitleg - NPM install Progressive Enhancement](course/Opdracht1.md)
 
-### [Uitwerking opdracht 1](https://web-technologies.netlify.app/)
+### [**Uitwerking opdracht 1**](https://web-technologies.netlify.app/)
 
 <br />
 
@@ -26,7 +26,7 @@ Voor opdracht 2 ga je proberen het Web te laten 'breken' door (browser) features
 
 - [Opdracht 2 Uitleg- Breek het Web](course/Opdracht2.md)
 
-### [Uitwerking opdracht 2](https://github.com/tsjuusmei/browser-technologies-2021/wiki/Opdracht-2)
+### [**Uitwerking opdracht 2**](https://github.com/tsjuusmei/browser-technologies-2021/wiki/Opdracht-2)
 
 <br />
 
