@@ -2,8 +2,6 @@
 
 // Robuuste, toegankelijke websites ontwerpen en maken … //
 
-Één van de mooiste [principes](https://www.w3.org/DesignIssues/Principles.html) van het web is dat iedereen met een computer en een browser het web kan gebruik. [Het web is voor iedereen](https://www.youtube.com/watch?v=UMNFehJIi0E). Het is geen gecontroleerde (programmeer) omgeving, je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij in je browser ziet. Er zijn technische beperkingen, zoals afmetingen van de browser, grootte van het apparaat, manier van interactie, kwaliteit van de hardware, kwaliteit van het netwerk en er zijn mensen, allemaal verschillende mensen ...
-
 In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement is en hoe je dit kan toepassen om goede, robuuste, toegankelijke websites te maken. Voor iedereen. Het web is voor iedereen, in dit vak leer je hoe je daarvoor kan zorgen.
 
 ## Opdrachten
@@ -36,6 +34,50 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 - [De eindopdracht Uitleg - Progressive Enhanced Browser Technologie](course/Eindopdracht.md)
 
+## Case
+
+### Enquête Minor Web Design & Development
+
+*Ik wil een enquête kunnen invullen over de minor Web Development, met verschillende antwoordmogelijkheden. Als ik de enquête niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.*
+
+### Vereisten voor de Enquete
+
+- Studentgegevens (naam + nummer) verplicht
+- Per vak 
+	- naam
+	- docent(en)
+	- weken waarin je het vak deed
+	- beoordeling op schaal 1-10 van
+	- lesstof (hoe moeilijk is het)
+	- uitleg (hoe duidelijk is het uitgelegd)
+	- eigen inzicht (hoe goed snap je het)
+	
+- Validatie: alles moet zijn ingevuld voordat je verder mag met het formulier. Geef duidelijke foutmeldingen.
+- Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
+
+## Wireflow
+
+### Start scherm
+
+![](https://i.imgur.com/9igutkl.jpeg)
+
+### Dashboard scherm
+
+![](https://i.imgur.com/QPY4eQr.jpeg)
+
+### Enquête scherm
+
+## Installation
+
+### Clone the repository
+
+`git clone https://github.com/tsjuusmei/browser-technologies-2021.git`
+
+### Open index.html in browser
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
