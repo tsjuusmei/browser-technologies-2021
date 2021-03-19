@@ -61,11 +61,11 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 ![](https://i.imgur.com/9igutkl.jpeg)
 
-#### Dashboard scherm
+### Dashboard scherm
 
 ![](https://i.imgur.com/QPY4eQr.jpeg)
 
-#### Enquête scherm
+### Enquête scherm
 
 ## Installation
 
