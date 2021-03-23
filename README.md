@@ -67,6 +67,9 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 ### Enquête scherm
 
+![](https://i.imgur.com/PZeweUT.jpg)
+
+
 ## Installation
 
 ### Clone the repository
