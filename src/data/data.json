@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Guus Maij",
+    "studentNumber": "500801919",
+    "enquetes": {
+      "weeklyNerd": {
+        "title": "Weekly Nerd",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "wafs": {
+        "title": "Web App From Scratch",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "cssttr": {
+        "title": "CSS To The Rescue",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "pwa": {
+        "title": "Progressive Web App",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "bt": {
+        "title": "Browser Technologies",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "rtw": {
+        "title": "Real-Time Web",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "hcd": {
+        "title": "Human Centered Design",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "meesterproef": {
+        "title": "Meesterproef",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      }
+    }
+  },
+  {
+    "name": "Lars Ruijs",
+    "studentNumber": "500801911",
+    "enquetes": {
+      "weeklyNerd": {
+        "title": "Weekly Nerd",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "wafs": {
+        "title": "Web App From Scratch",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "cssttr": {
+        "title": "CSS To The Rescue",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "pwa": {
+        "title": "Progressive Web App",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "bt": {
+        "title": "Browser Technologies",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "rtw": {
+        "title": "Real-Time Web",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "hcd": {
+        "title": "Human Centered Design",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      },
+      "meesterproef": {
+        "title": "Meesterproef",
+        "teacher": "",
+        "date": "",
+        "rating": null,
+        "difficulty": "",
+        "explanation": "",
+        "understanding": ""
+      }
+    }
+  }
+]

@@ -1,7 +1,6 @@
 const express = require('express')
 const router = require('./src/routes/router.js')
 const path = require('path')
-require("dotenv").config();
 
 const app = express()
 const templates = path.join(__dirname, './src/views')
