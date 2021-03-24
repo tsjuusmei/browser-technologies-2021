@@ -69,6 +69,13 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 ![](https://i.imgur.com/PZeweUT.jpg)
 
+## Enhancements
+
+### Notification API
+
+Met de Notification API wil ik feedback aan de gebruiker geven wanneer enquêtes worden voltooid of opgeslagen.
+
+
 
 ## Installation
 
