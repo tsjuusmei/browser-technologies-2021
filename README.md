@@ -76,7 +76,13 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 `git clone https://github.com/tsjuusmei/browser-technologies-2021.git`
 
-### Open index.html in browser
+### Install packages
+
+`npm install`
+
+### Run application
+
+`npm run start`
 
 ## License
 
