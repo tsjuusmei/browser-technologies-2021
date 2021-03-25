@@ -53,7 +53,7 @@ function getUserData(user) {
 }
 
 function getEnq(user) {
-    let courses = ["PWA", "Browser-Technologies", "WAFS", "CSS-to-the-rescue", "Real-time-web", "HCD", "Meesterproef"]
+    let courses = ["Progressive Web App", "Browser Technologies", "Web App From Scratch", "CSS To The Rescue", "Real-Time Web", "Human Centered Design", "Meesterproef"]
     // console.log(data[user].enq)
     let userData = data[user].enq
     let doneEnq = [];
