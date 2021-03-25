@@ -1,29 +1,43 @@
 <%- include ('./partials/header.ejs') %>
 
-<header>
+  <header>
     <h1>Welkom, <%= name %>!</h1>
     <p>Deze enquêtes zijn voor jou</p>
-</header>
+  </header>
 
-<main>
+  <main>
     <h2>Nog te maken:</h2>
     <ul>
-        <% make.forEach(enq => { %>
-            <li>
-                <a href="enq/<%= enq %>"><%= enq %></a>
-            </li>
+      <% make.forEach(enq=> { %>
+        <li>
+          <a href="enq/<%= enq %>">
+            <%= enq %>
+          </a>
+        </li>
         <% }); %>
     </ul>
-    <section>
-        <h2>Al afgerond:</h2>
-        <ul>
-            <% done.forEach(enq => { %>
-                <li>
-                    <p><%= enq %></p>
-                </li>
-            <% }); %>
-        </ul>
-    </section>
-</main>
+    <h2>Nog af te ronden:</h2>
+    <ul>
+      <% started.forEach(enq=> { %>
+        <li>
+          <a href="enq/<%= enq %>">
+            <p>
+              <%= enq %>
+            </p>
+          </a>
+        </li>
+        <% }); %>
+    </ul>
+    <h2>Al afgerond:</h2>
+    <ul>
+      <% done.forEach(enq=> { %>
+        <li>
+          <p>
+            <%= enq %>
+          </p>
+        </li>
+        <% }); %>
+    </ul>
+  </main>
 
-<%- include ('./partials/footer.ejs') %>
+  <%- include ('./partials/footer.ejs') %>

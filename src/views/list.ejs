@@ -10,51 +10,52 @@
         <fieldset>
             <legend>Docenten <%= course %></legend>
             <% data.lecturer.forEach(lecturer => { %>
-            <input type="radio" id="<%= lecturer %>" name="lecturer" value="<%= lecturer %>">
+            <input type="radio" id="<%= lecturer %>" name="lecturer" value="<%= lecturer %>" <% if(courseList && courseList.lecturer == courseList.lecturer){%><%='checked'%><%}%>>
             <label for="<%= lecturer %>"><%= lecturer %></label>
             <% }); %>
         </fieldset>
         <fieldset>
             <legend>In welke week werd <%= course %> beoordeeld?</legend>
             <label for="week">Beoordeling in week:</label>
-            <input type="week" id="week">
+            <input type="week" id="week" name="week" <% if(courseList && courseList.week){%><%=`value=${courseList.week}`%><%}%>>
         </fieldset>
         <fieldset>
             <legend>Geef <%= course %> een cijfer</legend>
             <label for="grade">Mijn cijfer:</label>
-            <input type="number" min="1" max="10" step="1" id="grade">
+            <input type="number" min="1" max="10" step="1" id="grade" name="grade" <% if(courseList && courseList.grade){%><%=`value=${courseList.grade}`%><%}%>>
         </fieldset>
         <fieldset>
             <legend>Hoe was de lesstof?</legend>
-            <input type="radio" id="material_good" name="material" value="good">
+            <input type="radio" id="material_good" name="material" value="good" <% if(courseList && courseList.material == 'good'){%><%='checked'%><%}%>>
             <label for="material_good">Boven verwachtingen</label>
-            <input type="radio" id="material_medium" name="material" value="medium">
+            <input type="radio" id="material_medium" name="material" value="medium" <% if(courseList && courseList.material == 'medium'){%><%='checked'%><%}%>>
             <label for="material_medium">Zoals verwacht</label>
-            <input type="radio" id="material_bad" name="material" value="bad">
+            <input type="radio" id="material_bad" name="material" value="bad" <% if(courseList && courseList.material == 'bad'){%><%='checked'%><%}%>>
             <label for="material_bad">Slechter als verwacht</label>
         </fieldset>
         <fieldset>
             <legend>Werd alles goed uitgelegd?</legend>
-            <input type="radio" id="content_good" name="content" value="good">
+            <input type="radio" id="content_good" name="content" value="good" <% if(courseList && courseList.content == 'good'){%><%='checked'%><%}%>>
             <label for="content_good">Alles werdt tot in hoog detail uitgelegd</label>
-            <input type="radio" id="content_medium" name="content" value="medium">
+            <input type="radio" id="content_medium" name="content" value="medium" <% if(courseList && courseList.content == 'medium'){%><%='checked'%><%}%>>
             <label for="content_medium">Alles werd uitgelegd tot op redelijk niveau</label>
-            <input type="radio" id="content_bad" name="content" value="bad">
+            <input type="radio" id="content_bad" name="content" value="bad" <% if(courseList && courseList.content == 'bad'){%><%='checked'%><%}%>>
             <label for="content_bad">Uitleg ging niet diep de stof in</label>
         </fieldset>
         <fieldset>
             <legend>Ik heb van dit vak veel geleerd</legend>
-            <input type="radio" id="learning_good" name="learning" value="good">
+            <input type="radio" id="learning_good" name="learning" value="good" <% if(courseList && courseList.learning == 'good'){%><%='checked'%><%}%>>
             <label for="learning_good">Ja</label>
-            <input type="radio" id="learning_bad" name="learning" value="bad">
+            <input type="radio" id="learning_bad" name="learning" value="bad" <% if(courseList && courseList.learning == 'bad'){%><%='checked'%><%}%>>
             <label for="learning_bad">Nee</label>
         </fieldset>
         <fieldset>
             <legend>Opmerkingen</legend>
             <label for="comments"></label>
-            <textarea name="comments" id="comments" rows="5"></textarea>
+            <textarea name="comments" id="comments" rows="5"><% if(courseList && courseList.comments){%><%=courseList.comments%><%}  %></textarea>
         </fieldset>
-        <input type="submit"></input>
+        <input type="submit" name="submit" value="Verstuur Enquête"></input>
+        <input type="submit" name="save" value="Sla tijdelijk op"></input>
     </form>
 </main>
 

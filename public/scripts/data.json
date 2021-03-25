@@ -4,18 +4,46 @@
     "user_studentnr": "500801910",
     "enq": [
       {
-        "Progressive Web App": {
-          "lecturer": "Joost",
-          "material": "good",
-          "content": "good",
-          "learning": "good",
-          "comments": "asd"
-        }
+        "course": "Browser Technologies",
+        "material": "good",
+        "content": "good",
+        "learning": "good",
+        "comments": "test",
+        "grade": "5",
+        "lecturer": "Koop",
+        "finished": false,
+        "started": true,
+        "week": "0001-W11"
       },
       {
-        "Meesterproef": {
-          "comments": ""
-        }
+        "course": "Progressive Web App",
+        "lecturer": "Joost",
+        "comments": "asd",
+        "material": "good",
+        "grade": "5",
+        "week": "0001-W11",
+        "content": "good",
+        "learning": "good",
+        "finished": false,
+        "started": true
+      },
+      {
+        "course": "Web App From Scratch",
+        "comments": "",
+        "finished": false,
+        "started": true
+      },
+      {
+        "course": "CSS To The Rescue",
+        "lecturer": "Docent_1",
+        "comments": "asd",
+        "finished": true,
+        "started": true,
+        "material": "good",
+        "grade": "5",
+        "week": "0001-W11",
+        "content": "good",
+        "learning": "good"
       }
     ]
   }

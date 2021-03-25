@@ -1,83 +1,136 @@
 const fs = require('fs');
 let path = "./public/scripts/data.json";
-let data = JSON.parse(fs.readFileSync(path, "utf8"));
+
+function getDataFile() {
+  let data = JSON.parse(fs.readFileSync(path, "utf8"))
+
+  return data
+}
 
 function pushUserData(user) {
-    if (!data[user.user_studentnr]) {
+  let path = "./public/scripts/data.json";
+  let data = getDataFile()
 
-        data[user.user_studentnr] = {
-            user_name: user.user_name,
-            user_studentnr: user.user_studentnr,
-            enq: []
-        }
+  if (!data[user.user_studentnr]) {
 
-        fs.writeFile(path, JSON.stringify(data), (err) => {
-            if (err) console.error(err)
-        });
+    data[user.user_studentnr] = {
+      user_name: user.user_name,
+      user_studentnr: user.user_studentnr,
+      enq: []
     }
+
+    fs.writeFile(path, JSON.stringify(data), (err) => {
+      if (err) console.error(err)
+    });
+  }
 }
 
 function pushEnq(enq, user, course) {
-    let key = course
+  let data = getDataFile()
+  let started = true
+  let finished = false
 
+  if (enq.save) {
+    finished = false
+  } else if (enq.submit) {
+    finished = true
+  }
+
+  let courseEnq = data[user].enq.find(enq => course == enq.course)
+
+  console.log(enq)
+
+  if (courseEnq) {
+    courseEnq.lecturer = enq.lecturer,
+      courseEnq.material = enq.material,
+      courseEnq.grade = enq.grade,
+      courseEnq.week = enq.week,
+      courseEnq.content = enq.content,
+      courseEnq.learning = enq.learning,
+      courseEnq.comments = enq.comments,
+      courseEnq.finished = finished,
+      courseEnq.started = started
+  } else {
     data[user].enq.push({
-        [key]: {
-            lecturer: enq.lecturer,
-            material: enq.material,
-            content: enq.content,
-            learning: enq.learning,
-            comments: enq.comments
-        }
+      course,
+      lecturer: enq.lecturer,
+      material: enq.material,
+      week: enq.week,
+      grade: enq.grade,
+      content: enq.content,
+      learning: enq.learning,
+      comments: enq.comments,
+      finished,
+      started
     })
+  }
 
-    fs.writeFile(path, JSON.stringify(data), (err) => {
-        if (err) console.error(err)
-    });
+  fs.writeFile(path, JSON.stringify(data), (err) => {
+    if (err) console.error(err)
+  });
 }
 
 function getUserData(user) {
-    let userData = data[user];
+  let data = getDataFile()
 
-    return userData;
+  let userData = data[user];
+
+  return userData;
+}
+
+function getFormData(course) {
+  let userData = getUserData()
+  let enquetes = userData.enq
+  let enquete = enquetes.filter(enq => enq.course)
 }
 
 function getEnq(user) {
-    let courses = ["Progressive Web App", "Browser Technologies", "Web App From Scratch", "CSS To The Rescue", "Real-Time Web", "Human Centered Design", "Meesterproef"]
-    let userData = data[user].enq
-    let doneEnq = [];
 
-    for (let i = 0; i < userData.length; i++) {
-        let [name] = Object.keys(userData[i]);
-        doneEnq.push(name)
+  let allCourses = ["Progressive Web App", "Browser Technologies", "Web App From Scratch", "CSS To The Rescue", "Real-Time Web", "Human Centered Design", "Meesterproef"]
+  let userData = getUserData(user)
+  let enquetes = userData.enq
+
+  let courses = allCourses.filter(course => {
+    if (!enquetes.some(enq => course == enq.course)) return course
+  })
+
+  return courses;
+}
+
+function startedEnq(user) {
+  let userData = getUserData(user)
+  let enquetes = userData.enq
+
+  let startedEnq = enquetes.filter(enq => {
+    if (enq.started && !enq.finished) {
+      return enq
+    } else {
+      console.log('geen finished enquetes')
     }
-
-    for (let i = 0; i < courses.length; i++) {
-        for (let j = 0; j < doneEnq.length; j++) {
-            if (courses[i] === doneEnq[j]) {
-                courses.splice(i, 1);
-            }
-        }
-    }
-
-    return courses;
+  })
+  let courseNames = startedEnq.map(enq => enq.course)
+  return courseNames;
 }
 
 function doneEnq(user) {
-    let userData = data[user].enq
-    let doneEnq = [];
+  let userData = getUserData(user)
+  let enquetes = userData.enq
 
-    for (let i = 0; i < userData.length; i++) {
-        let [name] = Object.keys(userData[i]);
-        doneEnq.push(name)
-    }
-
-    return doneEnq;
+  let doneEnq = enquetes.filter(enq => {
+    if (enq.finished) {
+      return enq
+    } 
+  })
+  let courseNames = doneEnq.map(enq => enq.course)
+  return courseNames;
 }
 
 module.exports = {
-    pushUserData,
-    pushEnq,
-    getUserData,
-    getEnq,
-    doneEnq
+  getDataFile,
+  pushUserData,
+  pushEnq,
+  getUserData,
+  getEnq,
+  startedEnq,
+  doneEnq
 }

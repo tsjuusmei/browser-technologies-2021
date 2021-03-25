@@ -3,12 +3,18 @@ const dataScript = require('./dataScript.js');
 
 async function course(req, res) {
     let course = await courseData(req.params.course)
+    let user = req.params.id;
+
+    let {enq} = dataScript.getUserData(user)
+
+    let [courseList] = enq.filter(e => req.params.course == e.course)
 
     res.render('list', {
         title: 'Enquête' + req.params.course,
+        courseList,
         course: req.params.course,
         data: course,
-        id: req.params.id
+        id: req.params.id,
     })
 }
 
@@ -21,7 +27,7 @@ function loginPost(req, res) {
 function enqPost(req, res) {
     dataScript.pushEnq(req.body, req.params.id, req.params.course);
 
-    res.redirect('/' + req.params.id +'/home');
+    res.redirect('/' + req.params.id + '/home');
 }
 
 function login(req, res) {
@@ -35,12 +41,14 @@ async function home(req, res) {
     const userData = await dataScript.getUserData(user)
     const make = await dataScript.getEnq(user)
     const done = await dataScript.doneEnq(user)
+    const started = await dataScript.startedEnq(user)
 
     res.render('home', {
         title: 'Mijn Enquêtes',
         name: userData.user_name,
-        make: make,
-        done: done,
+        make,
+        done,
+        started
     })
 }
 
