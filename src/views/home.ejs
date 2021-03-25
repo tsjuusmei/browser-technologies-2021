@@ -1,0 +1,29 @@
+<%- include ('./partials/header.ejs') %>
+
+<header>
+    <h1>Welkom, <%= name %>!</h1>
+    <p>Deze enquêtes zijn voor jou</p>
+</header>
+
+<main>
+    <h2>Nog te maken:</h2>
+    <ul>
+        <% make.forEach(enq => { %>
+            <li>
+                <a href="enq/<%= enq %>"><%= enq %></a>
+            </li>
+        <% }); %>
+    </ul>
+    <section>
+        <h2>Al afgerond:</h2>
+        <ul>
+            <% done.forEach(enq => { %>
+                <li>
+                    <p><%= enq %></p>
+                </li>
+            <% }); %>
+        </ul>
+    </section>
+</main>
+
+<%- include ('./partials/footer.ejs') %>

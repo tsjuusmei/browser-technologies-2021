@@ -1,0 +1,23 @@
+{
+  "500801910": {
+    "user_name": "Guus",
+    "user_surname": "Maij",
+    "user_studentnr": "500801910",
+    "enq": [
+      {
+        "PWA": {
+          "lecturer": "Joost",
+          "material": "good",
+          "content": "good",
+          "learning": "good",
+          "comments": "asd"
+        }
+      },
+      {
+        "Meesterproef": {
+          "comments": ""
+        }
+      }
+    ]
+  }
+}
