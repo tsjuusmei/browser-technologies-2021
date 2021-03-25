@@ -26,7 +26,7 @@ function enqPost(req, res) {
 
 function login(req, res) {
     res.render('login', {
-        title: 'Enquête login'
+        title: 'Login | Enquêtes'
     })
 }
 
@@ -37,8 +37,8 @@ async function home(req, res) {
     const done = await dataScript.doneEnq(user)
 
     res.render('home', {
-        title: 'Mijn enquêtes',
-        name: userData.user_name + ' ' + userData.user_surname,
+        title: 'Mijn Enquêtes',
+        name: userData.user_name,
         make: make,
         done: done,
     })

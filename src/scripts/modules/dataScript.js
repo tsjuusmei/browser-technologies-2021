@@ -7,7 +7,6 @@ function pushUserData(user) {
 
         data[user.user_studentnr] = {
             user_name: user.user_name,
-            user_surname: user.user_surname,
             user_studentnr: user.user_studentnr,
             enq: []
         }
@@ -36,16 +35,6 @@ function pushEnq(enq, user, course) {
     });
 }
 
-/*
-{
-  lecturer: 'Koop',
-  material: 'medium',
-  content: 'medium',
-  learning: 'good',
-  comments: ''
-}
-*/
-
 function getUserData(user) {
     let userData = data[user];
 
@@ -54,7 +43,6 @@ function getUserData(user) {
 
 function getEnq(user) {
     let courses = ["Progressive Web App", "Browser Technologies", "Web App From Scratch", "CSS To The Rescue", "Real-Time Web", "Human Centered Design", "Meesterproef"]
-    // console.log(data[user].enq)
     let userData = data[user].enq
     let doneEnq = [];
 
