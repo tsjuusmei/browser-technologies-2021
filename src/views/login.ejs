@@ -5,14 +5,14 @@
 </header>
 
 <main>
-    <form action="/login-redirect" method="post">
+    <form action="/login-redirect" name="login" method="post" onsubmit="return validateForm()">
         <fieldset>
             <legend>Vertel iets over jezelf</legend>
 
             <label for="name">Naam:</label>
             <input type="text" id="name" name="user_name">
             <label for="studentnr">Studentnummer:</label>
-            <input type="text" id="studentnr" name="user_studentnr">
+            <input type="text" id="studentnr" name="user_studentnr" maxlength="9" minlength="9">
         </fieldset>
         <input type="submit"></input>
     </form>
