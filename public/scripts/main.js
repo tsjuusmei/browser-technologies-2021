@@ -1,5 +1,3 @@
-console.log('js is loaded')
-
 function changeSliders(input) {
   if (input) {
       input.type = 'range';
