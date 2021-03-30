@@ -4,6 +4,12 @@
     <h1>Enquête <%= course %></h1>
 </header>
 
+<% if(courseList) { %>
+    <script>
+    grade = `<%= grade %>`
+    console.log(grade)
+    </script>
+<% } %>
 
 <main>
     <form action="/<%= id %>/enq-redirect/<%= course %>" method="post">
@@ -14,7 +20,7 @@
             <label for="<%= lecturer %>"><%= lecturer %></label>
             <% }); %>
         </fieldset>
-        <fieldset>
+        <fieldset id="q1">
             <legend>Wanneer volgde je het vak <%= course %>?</legend>
             <input type="radio" id="period1" name="period" value="Week 1 t/m 4" required <% if(courseList && courseList.period == 'Week 1 t/m 4'){%><%='checked'%><%}%>>
             <label for="period1">Week 1 t/m 4</label>
@@ -28,12 +34,12 @@
             <input type="radio" id="period4" name="period" value="Week 13 t/m 16" required <% if(courseList && courseList.period == 'Week 13 t/m 16'){%><%='checked'%><%}%>>
             <label for="period4">Week 13 t/m 16</label>
         </fieldset>
-        <fieldset class="number">
+        <fieldset id="q2" class="number">
             <legend>Geef <%= course %> een cijfer</legend>
             <label for="grade">Mijn cijfer:</label>
-            <input type="number" min="1" max="10" step="1" id="grade" name="grade" <% if(courseList && courseList.grade){%><%=`value=${courseList.grade}`%><%}%>>
+            <input type="number" min="0" max="10" step="1" id="grade" name="grade" <% if(courseList && courseList.grade){%><%=`value=${courseList.grade}`%><%} else {%><%=`value=0`%><%}%>>
         </fieldset>
-        <fieldset>
+        <fieldset id="q3">
             <legend>Hoe was de lesstof?</legend>
             <input type="radio" id="material_good" name="material" value="good" <% if(courseList && courseList.material == 'good'){%><%='checked'%><%}%>>
             <label for="material_good">Boven verwachtingen</label>
@@ -42,7 +48,7 @@
             <input type="radio" id="material_bad" name="material" value="bad" <% if(courseList && courseList.material == 'bad'){%><%='checked'%><%}%>>
             <label for="material_bad">Slechter als verwacht</label>
         </fieldset>
-        <fieldset>
+        <fieldset id="q4">
             <legend>Werd alles goed uitgelegd?</legend>
             <input type="radio" id="content_good" name="content" value="good" <% if(courseList && courseList.content == 'good'){%><%='checked'%><%}%>>
             <label for="content_good">Alles werdt tot in hoog detail uitgelegd</label>
@@ -51,21 +57,21 @@
             <input type="radio" id="content_bad" name="content" value="bad" <% if(courseList && courseList.content == 'bad'){%><%='checked'%><%}%>>
             <label for="content_bad">Uitleg ging niet diep de stof in</label>
         </fieldset>
-        <fieldset>
+        <fieldset id="q5">
             <legend>Ik heb van dit vak veel geleerd</legend>
             <input type="radio" id="learning_good" name="learning" value="good" <% if(courseList && courseList.learning == 'good'){%><%='checked'%><%}%>>
             <label for="learning_good">Ja</label>
             <input type="radio" id="learning_bad" name="learning" value="bad" <% if(courseList && courseList.learning == 'bad'){%><%='checked'%><%}%>>
             <label for="learning_bad">Nee</label>
         </fieldset>
-        <fieldset>
+        <fieldset id="q6">
             <legend>Opmerkingen</legend>
             <label for="comments"></label>
             <textarea name="comments" id="comments" rows="5"><% if(courseList && courseList.comments){%><%=courseList.comments%><%}  %></textarea>
         </fieldset>
-        <input type="submit" name="submit" value="Verstuur Enquête"></input>
+        <input type="submit" name="submit" id="submitEnquete" value="Verstuur Enquête"></input>
         <input type="submit" name="save" value="Sla tijdelijk op"></input>
     </form>
 </main>
 
-<%- include ('./partials/footer.ejs') %>
+<%- include ('./partials/listFooter.ejs') %>

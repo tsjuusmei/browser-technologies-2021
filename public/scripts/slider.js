@@ -1,7 +1,7 @@
 function changeSliders(input) {
   if (input) {
       input.type = 'range';
-      input.value = 5;
+      input.value = grade;
       input.classList.add('slider');
 
       let sliderText = document.createElement('p');

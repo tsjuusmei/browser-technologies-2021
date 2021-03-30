@@ -38,8 +38,6 @@ function pushEnq(enq, user, course) {
 
   let courseEnq = data[user].enq.find(enq => course == enq.course)
 
-  console.log(enq)
-
   if (courseEnq) {
     courseEnq.lecturer = enq.lecturer,
       courseEnq.material = enq.material,
@@ -104,8 +102,6 @@ function startedEnq(user) {
   let startedEnq = enquetes.filter(enq => {
     if (enq.started && !enq.finished) {
       return enq
-    } else {
-      console.log('geen finished enquetes')
     }
   })
   let courseNames = startedEnq.map(enq => enq.course)

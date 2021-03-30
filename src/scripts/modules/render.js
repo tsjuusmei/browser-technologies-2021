@@ -9,10 +9,19 @@ async function course(req, res) {
 
     let [courseList] = enq.filter(e => req.params.course == e.course)
 
+    let grade = 0
+    
+    if(courseList) {
+        grade = courseList.grade
+    } else if (!courseList) {
+        grade = 0
+    }
+
     res.render('list', {
         title: 'Enquête' + req.params.course,
         courseList,
         course: req.params.course,
+        grade,
         data: course,
         id: req.params.id,
     })

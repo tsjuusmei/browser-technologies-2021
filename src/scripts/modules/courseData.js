@@ -17,7 +17,7 @@ module.exports = function getData(param) {
       return data;
   } else if (param === 'Web App From Scratch') {
       data = {
-          lecturer: ["Docent_1", "Docent_2", "Docent_3"]
+          lecturer: ["Docent_1", "Docent_2"]
       };
       return data;
   } else if (param === 'Real-Time Web') {
