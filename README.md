@@ -34,6 +34,10 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 - [De eindopdracht Uitleg - Progressive Enhanced Browser Technologie](course/Eindopdracht.md)
 
+## Live Link
+
+https://browsertech-guus.herokuapp.com/login
+
 ## Case
 
 ### Enquête Minor Web Design & Development
@@ -55,6 +59,10 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 - Validatie: alles moet zijn ingevuld voordat je verder mag met het formulier. Geef duidelijke foutmeldingen.
 - Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
 
+### Core functionaliteit
+
+Enquêtes voor de minor kunnen invullen, valideren en later kunnen afmaken.
+
 ## Wireflow
 
 ### Start scherm
@@ -69,19 +77,79 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 ![](https://i.imgur.com/PZeweUT.jpg)
 
+## Vier lagen
+
+### Functional / Reliable
+
+Dit is de laag waarbij, in mijn project, alleen HTML wordt gebruikt. Het ziet er visueel niet aantrekkelijk uit, maar behoud de hoofdfunctionaliteit; kunnen inloggen, het invullen van enquêtes en deze kunnen opslaan om later verder te gaan.
+
+### Usable
+
+Bij deze laag komt CSS in werking. Hierdoor is de user experience veel beter, omdat het er logischer, beter en mooier uit ziet. De styling is zodanig toegepast dat ook functionaliteiten veel duidelijker zijn en beter voor gebruik.
+
+### Pleasurable
+
+De pleasurable laag bevat allemaal extra functionaliteiten die handig zijn, maar niet persee nodig. Ik heb hier bijvoorbeeld een slider toegevoegd in het formulier, en ik heb de vragen achter elkaar laten verschijnen wanneer JavaScript aan staat binnen de browser.
+
 ## Enhancements
 
-### Notification API
+### Slider
 
-Met de Notification API wil ik feedback aan de gebruiker geven wanneer enquêtes worden voltooid of opgeslagen.
+In elke enquête staat een vraag met wat voor cijfer de student het vak zou geven. Deze wordt zonder JavaScript getoond als een tekstvakje waarin je een cijfer moet typen of kun je omhoog of omlaag klikken. Met JavaScript heb ik hier een slider toegevoegd, waardoor het aanduiden van een cijfer makkelijker en mooier wordt.
 
+### Formulier in stappen
 
+De enquête bestaat uit zeven vragen. Zonder JavaScript worden deze allemaal gelijk getoond, maar met JavaScript wordt de volgende vraag na elk gegeven antwoord getoond. Voor al ingevulde enquêtes werkt dit hetzelfde, maar als er al een gegeven antwoord is, dan staat de volgende vraag er al.
+
+## Tests
+
+### Desktop
+
+Voor desktop ga ik de volgende browsers testen:
+- Google Chrome
+- Firefox
+
+**Google Chrome**
+
+<img src="https://i.imgur.com/1SWAVVT.png" width="1100"/>
+
+**Firefox**
+
+<img src="https://i.imgur.com/F7V5acw.png" width="1100"/>
+
+### Mobile
+
+Voor mobile ga ik de volgende browsers testen:
+- iOS: Google Chrome
+- Android: Firefox
+
+**iOS,Google Chrome**
+
+<img src="https://i.imgur.com/769HxrG.png" width="400"/> 
+
+**Android, Firefox**
+
+<img src="https://i.imgur.com/FdCJAY0.png" width="400"/>
+
+### Testverslag
+
+Binnen de tests test ik de core functionaliteiten en de color vision deficiencies. Bij elke test werkte de website snel en prima qua functionaliteit. De styling veranderd alleen helaas wel per browser en/of device. Zo ziet de font `monospace` er anders uit op Google Chrome dan op Firefox. Dit is gelukkig geen grote issue geweest, en heb ook in mijn CSS een back-up font `sans-serif` genoteerd. Ook de radio buttons en sliders zien er per browser en device verschillend uit. Deze waren in alle gevallen nog goed bruik- en zichtbaar. Ook de progressive enhancements werkten op mijn geteste devices nog prima.
+
+## Extra tijd
+
+### Wat zou ik hebben toegevoegd als ik meer tijd had voor dit project?
+
+Een extra enhancement die ik zou toevoegen zou toch wel een progress bar bij elke enquête zijn. Hiermee geef je gemakkelijk aan hoe ver een gebruiker in een enquête is, wat heel handig is in samenwerking met mijn progressive enhanvement die de enquête in stappen laat zien.
 
 ## Installation
 
 ### Clone the repository
 
 `git clone https://github.com/tsjuusmei/browser-technologies-2021.git`
+
+### Navigate to foler
+
+`cd browser-technologies-2021`
 
 ### Install packages
 
