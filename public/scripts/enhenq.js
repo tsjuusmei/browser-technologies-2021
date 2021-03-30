@@ -80,6 +80,7 @@ if (contentq[0].checked || contentq[1].checked || contentq[2].checked) {
 const learningq = document.querySelectorAll('input[name="learning"]');
 
 if (learningq[0].checked || learningq[1].checked) {
+  document.getElementById("q6").style.display = "block";
   document.getElementById("submitEnquete").disabled = false;
 } else {
   learningq.forEach((learning) => {
