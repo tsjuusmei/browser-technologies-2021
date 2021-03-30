@@ -43,8 +43,10 @@
             <legend>Hoe was de lesstof?</legend>
             <input type="radio" id="material_good" name="material" value="good" <% if(courseList && courseList.material == 'good'){%><%='checked'%><%}%>>
             <label for="material_good">Boven verwachtingen</label>
+            <br>
             <input type="radio" id="material_medium" name="material" value="medium" <% if(courseList && courseList.material == 'medium'){%><%='checked'%><%}%>>
             <label for="material_medium">Zoals verwacht</label>
+            <br>
             <input type="radio" id="material_bad" name="material" value="bad" <% if(courseList && courseList.material == 'bad'){%><%='checked'%><%}%>>
             <label for="material_bad">Slechter als verwacht</label>
         </fieldset>
@@ -52,8 +54,10 @@
             <legend>Werd alles goed uitgelegd?</legend>
             <input type="radio" id="content_good" name="content" value="good" <% if(courseList && courseList.content == 'good'){%><%='checked'%><%}%>>
             <label for="content_good">Alles werdt tot in hoog detail uitgelegd</label>
+            <br>
             <input type="radio" id="content_medium" name="content" value="medium" <% if(courseList && courseList.content == 'medium'){%><%='checked'%><%}%>>
             <label for="content_medium">Alles werd uitgelegd tot op redelijk niveau</label>
+            <br>
             <input type="radio" id="content_bad" name="content" value="bad" <% if(courseList && courseList.content == 'bad'){%><%='checked'%><%}%>>
             <label for="content_bad">Uitleg ging niet diep de stof in</label>
         </fieldset>
@@ -61,6 +65,7 @@
             <legend>Ik heb van dit vak veel geleerd</legend>
             <input type="radio" id="learning_good" name="learning" value="good" <% if(courseList && courseList.learning == 'good'){%><%='checked'%><%}%>>
             <label for="learning_good">Ja</label>
+            <br>
             <input type="radio" id="learning_bad" name="learning" value="bad" <% if(courseList && courseList.learning == 'bad'){%><%='checked'%><%}%>>
             <label for="learning_bad">Nee</label>
         </fieldset>

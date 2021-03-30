@@ -1,1 +1,87 @@
-body{background-color:white}
+:root {
+    --dark: #000;
+    --course: #F4E408;
+    --darklight: rgb(90, 90, 90);
+    --light: #fff;
+}
+
+a {
+    color: var(--light);
+}
+
+* {
+    margin: 0
+}
+
+body {
+    background-color: var(--dark);
+    font-family: monospace, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: var(--light)
+}
+
+header {
+    background-color: var(--course);
+    color: var(--dark);
+    width: 100%;
+    padding: 2em
+}
+
+main {
+    margin: 2em;
+}
+
+fieldset {
+    margin: 2em;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+fieldset legend {
+    font-size: 1.5em;
+}
+
+input[type=submit] {
+    background-color: var(--course);
+    padding: 1em;
+    color: var(--dark);
+    font-family: monospace, sans-serif;
+    font-size: 1.2em;
+    border-radius: 1em;
+}
+
+/* home pagina */
+
+ul {
+    list-style-type: none;
+    margin-bottom: 1em;
+    padding: 1em
+}
+
+li {
+    padding: .3em
+}
+
+/* list pagina */
+
+.number p {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+input[type="submit"] {
+    padding-top: 1em;
+}
+
+textarea {
+    width: 70%;
+}
+
+input[type="submit"]:disabled {
+    background-color: var(--darklight);
+    color: var(--course)
+}
