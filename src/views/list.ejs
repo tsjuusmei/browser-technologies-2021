@@ -15,11 +15,20 @@
             <% }); %>
         </fieldset>
         <fieldset>
-            <legend>In welke week werd <%= course %> beoordeeld?</legend>
-            <label for="week">Beoordeling in week:</label>
-            <input type="week" id="week" name="week" <% if(courseList && courseList.week){%><%=`value=${courseList.week}`%><%}%>>
+            <legend>Wanneer volgde je het vak <%= course %>?</legend>
+            <input type="radio" id="period1" name="period" value="Week 1 t/m 4" required <% if(courseList && courseList.period == 'Week 1 t/m 4'){%><%='checked'%><%}%>>
+            <label for="period1">Week 1 t/m 4</label>
+            <br>
+            <input type="radio" id="period2" name="period" value="Week 5 t/m 8" required <% if(courseList && courseList.period == 'Week 5 t/m 8'){%><%='checked'%><%}%>>
+            <label for="period2">Week 5 t/m 8</label>
+            <br>
+            <input type="radio" id="period3" name="period" value="Week 9 t/m 12" required <% if(courseList && courseList.period == 'Week 9 t/m 12'){%><%='checked'%><%}%>>
+            <label for="period3">Week 9 t/m 12</label>
+            <br>
+            <input type="radio" id="period4" name="period" value="Week 13 t/m 16" required <% if(courseList && courseList.period == 'Week 13 t/m 16'){%><%='checked'%><%}%>>
+            <label for="period4">Week 13 t/m 16</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="number">
             <legend>Geef <%= course %> een cijfer</legend>
             <label for="grade">Mijn cijfer:</label>
             <input type="number" min="1" max="10" step="1" id="grade" name="grade" <% if(courseList && courseList.grade){%><%=`value=${courseList.grade}`%><%}%>>

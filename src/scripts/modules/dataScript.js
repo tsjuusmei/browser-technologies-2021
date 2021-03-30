@@ -44,7 +44,7 @@ function pushEnq(enq, user, course) {
     courseEnq.lecturer = enq.lecturer,
       courseEnq.material = enq.material,
       courseEnq.grade = enq.grade,
-      courseEnq.week = enq.week,
+      courseEnq.period = enq.period,
       courseEnq.content = enq.content,
       courseEnq.learning = enq.learning,
       courseEnq.comments = enq.comments,
