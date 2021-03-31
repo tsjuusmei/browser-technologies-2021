@@ -145,23 +145,6 @@ Binnen de tests test ik de core functionaliteiten en de color vision deficiencie
 
 Een extra enhancement die ik zou toevoegen zou toch wel een progress bar bij elke enquête zijn. Hiermee geef je gemakkelijk aan hoe ver een gebruiker in een enquête is, wat heel handig is in samenwerking met mijn progressive enhanvement die de enquête in stappen laat zien.
 
-## Installation
-
-### Clone the repository
-
-`git clone https://github.com/tsjuusmei/browser-technologies-2021.git`
-
-### Navigate to foler
-
-`cd browser-technologies-2021`
-
-### Install packages
-
-`npm install`
-
-### Run application
-
-`npm run start`
 
 ## License
 
