@@ -139,6 +139,24 @@ Voor mobile ga ik de volgende browsers testen:
 
 Binnen de tests test ik de core functionaliteiten en de color vision deficiencies. Bij elke test werkte de website snel en prima qua functionaliteit. De styling veranderd alleen helaas wel per browser en/of device. Zo ziet de font `monospace` er anders uit op Google Chrome dan op Firefox. Dit is gelukkig geen grote issue geweest, en heb ook in mijn CSS een back-up font `sans-serif` genoteerd. Ook de radio buttons en sliders zien er per browser en device verschillend uit. Deze waren in alle gevallen nog goed bruik- en zichtbaar. Ook de progressive enhancements werkten op mijn geteste devices nog prima.
 
+## Installation
+
+### Clone the repository
+
+`git clone https://github.com/tsjuusmei/browser-technologies-2021.git`
+
+### Navigate to foler
+
+`cd browser-technologies-2021`
+
+### Install packages
+
+`npm install`
+
+### Run application
+
+`npm run start`
+
 ## Extra tijd
 
 ### Wat zou ik hebben toegevoegd als ik meer tijd had voor dit project?
