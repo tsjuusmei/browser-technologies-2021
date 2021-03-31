@@ -97,9 +97,13 @@ De pleasurable laag bevat allemaal extra functionaliteiten die handig zijn, maar
 
 In elke enquête staat een vraag met wat voor cijfer de student het vak zou geven. Deze wordt zonder JavaScript getoond als een tekstvakje waarin je een cijfer moet typen of kun je omhoog of omlaag klikken. Met JavaScript heb ik hier een slider toegevoegd, waardoor het aanduiden van een cijfer makkelijker en mooier wordt.
 
+Zie [hier](https://github.com/tsjuusmei/browser-technologies-2021/blob/master/public/scripts/slider.js) de code voor de slider.
+
 ### Formulier in stappen
 
 De enquête bestaat uit zeven vragen. Zonder JavaScript worden deze allemaal gelijk getoond, maar met JavaScript wordt de volgende vraag na elk gegeven antwoord getoond. Voor al ingevulde enquêtes werkt dit hetzelfde, maar als er al een gegeven antwoord is, dan staat de volgende vraag er al.
+
+Zie [hier](https://github.com/tsjuusmei/browser-technologies-2021/blob/master/public/scripts/enhenq.js) de code voor het formulier in stappen.
 
 ## Tests
 
